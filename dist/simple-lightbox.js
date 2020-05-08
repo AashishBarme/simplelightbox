@@ -132,7 +132,7 @@ var SimpleLightbox = /*#__PURE__*/function () {
       initialPointerOffsetY: 0,
       initialPointerOffsetX2: 0,
       initialPointerOffsetY2: 0,
-      initialScale: 1,
+      initialScale: 1.25,
       initialPinchDistance: 0,
       pointerOffsetX: 0,
       pointerOffsetY: 0,
@@ -719,7 +719,7 @@ var SimpleLightbox = /*#__PURE__*/function () {
 
                   _this6.controlCoordinates.zoomed = true;
                 } else {
-                  _this6.controlCoordinates.initialScale = 1;
+                  _this6.controlCoordinates.initialScale = 1.25;
 
                   _this6.setZoomData(_this6.controlCoordinates.initialScale, 0, 0);
 
@@ -890,7 +890,7 @@ var SimpleLightbox = /*#__PURE__*/function () {
               /* Set attributes */
               _this6.setZoomData(_this6.controlCoordinates.initialScale, _this6.controlCoordinates.targetOffsetX, _this6.controlCoordinates.targetOffsetY);
 
-              if (_this6.controlCoordinates.initialScale === 1) {
+              if (_this6.controlCoordinates.initialScale === 1.25) {
                 _this6.controlCoordinates.zoomed = false;
 
                 if (_this6.domNodes.caption.style.display === 'none') {
@@ -963,7 +963,7 @@ var SimpleLightbox = /*#__PURE__*/function () {
 
           _this6.controlCoordinates.zoomed = true;
         } else {
-          _this6.controlCoordinates.initialScale = 1;
+          _this6.controlCoordinates.initialScale = 1.25;
 
           _this6.setZoomData(_this6.controlCoordinates.initialScale, 0, 0);
 
