@@ -484,10 +484,10 @@ var SimpleLightbox = /*#__PURE__*/function () {
           windowWidth = window.innerWidth * this.options.widthRatio,
           windowHeight = window.innerHeight * this.options.heightRatio;
       tmpImage.setAttribute('src', this.currentImage.getAttribute('src'));
-      this.currentImage.dataset.scale = 1;
+      this.currentImage.dataset.scale = 1.25;
       this.currentImage.dataset.translateX = 0;
       this.currentImage.dataset.translateY = 0;
-      this.zoomPanElement(0, 0, 1);
+      this.zoomPanElement(0, 0, 1.25);
       tmpImage.addEventListener('error', function (event) {
         _this5.relatedElements[_this5.currentImageIndex].dispatchEvent(new Event('error.' + _this5.eventNamespace));
 
