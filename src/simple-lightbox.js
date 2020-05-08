@@ -442,10 +442,10 @@ class SimpleLightbox {
 
         tmpImage.setAttribute('src', this.currentImage.getAttribute('src'));
 
-        this.currentImage.dataset.scale = 1.25;
+        this.currentImage.dataset.scale = 1;
         this.currentImage.dataset.translateX = 0;
         this.currentImage.dataset.translateY = 0;
-        this.zoomPanElement(0, 0, 1.25);
+        this.zoomPanElement(0, 0, 1);
 
         tmpImage.addEventListener('error', (event) => {
             this.relatedElements[this.currentImageIndex].dispatchEvent(new Event('error.' + this.eventNamespace));

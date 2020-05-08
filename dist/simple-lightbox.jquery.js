@@ -132,7 +132,7 @@ var SimpleLightbox = /*#__PURE__*/function () {
       initialPointerOffsetY: 0,
       initialPointerOffsetX2: 0,
       initialPointerOffsetY2: 0,
-      initialScale: 1.25,
+      initialScale: 1,
       initialPinchDistance: 0,
       pointerOffsetX: 0,
       pointerOffsetY: 0,
@@ -484,10 +484,10 @@ var SimpleLightbox = /*#__PURE__*/function () {
           windowWidth = window.innerWidth * this.options.widthRatio,
           windowHeight = window.innerHeight * this.options.heightRatio;
       tmpImage.setAttribute('src', this.currentImage.getAttribute('src'));
-      this.currentImage.dataset.scale = 1.25;
+      this.currentImage.dataset.scale = 1;
       this.currentImage.dataset.translateX = 0;
       this.currentImage.dataset.translateY = 0;
-      this.zoomPanElement(0, 0, 1.25);
+      this.zoomPanElement(0, 0, 1);
       tmpImage.addEventListener('error', function (event) {
         _this5.relatedElements[_this5.currentImageIndex].dispatchEvent(new Event('error.' + _this5.eventNamespace));
 
@@ -719,7 +719,7 @@ var SimpleLightbox = /*#__PURE__*/function () {
 
                   _this6.controlCoordinates.zoomed = true;
                 } else {
-                  _this6.controlCoordinates.initialScale = 1.25;
+                  _this6.controlCoordinates.initialScale = 1;
 
                   _this6.setZoomData(_this6.controlCoordinates.initialScale, 0, 0);
 
@@ -890,7 +890,7 @@ var SimpleLightbox = /*#__PURE__*/function () {
               /* Set attributes */
               _this6.setZoomData(_this6.controlCoordinates.initialScale, _this6.controlCoordinates.targetOffsetX, _this6.controlCoordinates.targetOffsetY);
 
-              if (_this6.controlCoordinates.initialScale === 1.25) {
+              if (_this6.controlCoordinates.initialScale === 1) {
                 _this6.controlCoordinates.zoomed = false;
 
                 if (_this6.domNodes.caption.style.display === 'none') {
@@ -963,7 +963,7 @@ var SimpleLightbox = /*#__PURE__*/function () {
 
           _this6.controlCoordinates.zoomed = true;
         } else {
-          _this6.controlCoordinates.initialScale = 1.25;
+          _this6.controlCoordinates.initialScale = 1;
 
           _this6.setZoomData(_this6.controlCoordinates.initialScale, 0, 0);
 
