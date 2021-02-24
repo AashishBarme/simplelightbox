@@ -611,7 +611,7 @@ var SimpleLightbox = /*#__PURE__*/function () {
   }, {
     key: "zoomPanElement",
     value: function zoomPanElement(targetOffsetX, targetOffsetY, targetScale) {
-      this.currentImage.style[this.transitionPrefix + 'transform'] = 'translate(' + targetOffsetX + ',' + targetOffsetY + ') scale(' + targetScale + ')';
+      this.currentImage.style[this.transitionPrefix + 'transform'] = 'translate(' + 0 + ',' + 0 + ') scale(' + targetScale + ')';
     }
   }, {
     key: "minMax",
