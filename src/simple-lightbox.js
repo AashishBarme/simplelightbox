@@ -574,7 +574,7 @@ class SimpleLightbox {
     setZoomData(initialScale, targetOffsetX, targetOffsetY) {
         this.currentImage.dataset.scale = initialScale;
         this.currentImage.dataset.translateX = targetOffsetX;
-        this.currentImage.dataset.translateY = targetOffsetY;
+        this.currentImage.dataset.translateY = 0;
     };
 
 
@@ -633,7 +633,7 @@ class SimpleLightbox {
                 this.controlCoordinates.containerOffsetY = this.domNodes.image.offsetTop;
 
                 this.controlCoordinates.initialOffsetX = parseFloat(this.currentImage.dataset.translateX);
-                this.controlCoordinates.initialOffsetY = parseFloat(this.currentImage.dataset.translateY);
+                this.controlCoordinates.initialOffsetY = parseFloat(0);
                 this.controlCoordinates.capture = true;
             } else {
                 this.controlCoordinates.touchCount = event.touches.length;
@@ -682,13 +682,13 @@ class SimpleLightbox {
                     }
 
                     this.controlCoordinates.initialOffsetX  = parseFloat(this.currentImage.dataset.translateX);
-                    this.controlCoordinates.initialOffsetY = parseFloat(this.currentImage.dataset.translateY);
+                    this.controlCoordinates.initialOffsetY = parseFloat(0);
                 }
                 else if (this.controlCoordinates.touchCount === 2) /* Pinch */ {
                     this.controlCoordinates.initialPointerOffsetX2 = event.touches[1].clientX;
                     this.controlCoordinates.initialPointerOffsetY2 = event.touches[1].clientY;
                     this.controlCoordinates.initialOffsetX = parseFloat(this.currentImage.dataset.translateX);
-                    this.controlCoordinates.initialOffsetY = parseFloat(this.currentImage.dataset.translateY);
+                    this.controlCoordinates.initialOffsetY = parseFloat(0);
                     this.controlCoordinates.pinchOffsetX = (this.controlCoordinates.initialPointerOffsetX + this.controlCoordinates.initialPointerOffsetX2) / 2;
                     this.controlCoordinates.pinchOffsetY = (this.controlCoordinates.initialPointerOffsetY + this.controlCoordinates.initialPointerOffsetY2) / 2;
                     this.controlCoordinates.initialPinchDistance = Math.sqrt(((this.controlCoordinates.initialPointerOffsetX - this.controlCoordinates.initialPointerOffsetX2) * (this.controlCoordinates.initialPointerOffsetX - this.controlCoordinates.initialPointerOffsetX2)) + ((this.controlCoordinates.initialPointerOffsetY - this.controlCoordinates.initialPointerOffsetY2) * (this.controlCoordinates.initialPointerOffsetY - this.controlCoordinates.initialPointerOffsetY2)));
