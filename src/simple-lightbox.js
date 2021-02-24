@@ -744,7 +744,7 @@ class SimpleLightbox {
                         this.controlCoordinates.targetOffsetX = (this.controlCoordinates.imgWidth * this.controlCoordinates.targetScale) <= this.controlCoordinates.containerWidth ? 0 : this.minMax(this.controlCoordinates.initialOffsetX - ((((((this.controlCoordinates.pinchOffsetX - this.controlCoordinates.containerOffsetX) - (this.controlCoordinates.containerWidth / 2)) - this.controlCoordinates.initialOffsetX) / (this.controlCoordinates.targetScale - this.controlCoordinates.scaleDifference))) * this.controlCoordinates.scaleDifference), this.controlCoordinates.limitOffsetX * (-1), this.controlCoordinates.limitOffsetX);
                         this.controlCoordinates.targetOffsetY = (this.controlCoordinates.imgHeight * this.controlCoordinates.targetScale) <= this.controlCoordinates.containerHeight ? 0 : this.minMax(this.controlCoordinates.initialOffsetY - ((((((this.controlCoordinates.pinchOffsetY - this.controlCoordinates.containerOffsetY) - (this.controlCoordinates.containerHeight / 2)) - this.controlCoordinates.initialOffsetY) / (this.controlCoordinates.targetScale - this.controlCoordinates.scaleDifference))) * this.controlCoordinates.scaleDifference), this.controlCoordinates.limitOffsetY * (-1), this.controlCoordinates.limitOffsetY);
 
-                        this.zoomPanElement(this.controlCoordinates.targetOffsetX + "px", this.controlCoordinates.targetOffsetY + "px", this.controlCoordinates.targetScale);
+                        this.zoomPanElement(0 + "px", 0 + "px", this.controlCoordinates.targetScale);
 
                         if (this.controlCoordinates.targetScale > 1) {
                             this.controlCoordinates.zoomed = true;
@@ -805,7 +805,7 @@ class SimpleLightbox {
               }
 
               this.setZoomData(this.controlCoordinates.initialScale, this.controlCoordinates.targetOffsetX, this.controlCoordinates.targetOffsetY);
-              this.zoomPanElement(this.controlCoordinates.targetOffsetX + "px", this.controlCoordinates.targetOffsetY + "px", this.controlCoordinates.targetScale);
+              this.zoomPanElement(0 + "px", 0 + "px", this.controlCoordinates.targetScale);
 
             }
 
