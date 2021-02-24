@@ -835,9 +835,9 @@ var SimpleLightbox = /*#__PURE__*/function () {
               _this6.controlCoordinates.initialPointerOffsetY = _this6.controlCoordinates.pointerOffsetY;
             }
 
-            _this6.setZoomData(_this6.controlCoordinates.initialScale, _this6.controlCoordinates.targetOffsetX, _this6.controlCoordinates.targetOffsetY);
+            _this6.setZoomData(_this6.controlCoordinates.initialScale,0, 0);
 
-            _this6.zoomPanElement(_this6.controlCoordinates.targetOffsetX + "px", _this6.controlCoordinates.targetOffsetY + "px", _this6.controlCoordinates.targetScale);
+            _this6.zoomPanElement(0 + "px",0 + "px", _this6.controlCoordinates.targetScale);
           }
         }
         /* Mouse Move implementation */
@@ -854,17 +854,17 @@ var SimpleLightbox = /*#__PURE__*/function () {
           _this6.controlCoordinates.targetOffsetX = _this6.controlCoordinates.imgWidth * _this6.controlCoordinates.targetScale <= _this6.controlCoordinates.containerWidth ? 0 : _this6.minMax(_this6.controlCoordinates.pointerOffsetX - (_this6.controlCoordinates.initialPointerOffsetX - _this6.controlCoordinates.initialOffsetX), _this6.controlCoordinates.limitOffsetX * -1, _this6.controlCoordinates.limitOffsetX);
           _this6.controlCoordinates.targetOffsetY = _this6.controlCoordinates.imgHeight * _this6.controlCoordinates.targetScale <= _this6.controlCoordinates.containerHeight ? 0 : _this6.minMax(_this6.controlCoordinates.pointerOffsetY - (_this6.controlCoordinates.initialPointerOffsetY - _this6.controlCoordinates.initialOffsetY), _this6.controlCoordinates.limitOffsetY * -1, _this6.controlCoordinates.limitOffsetY);
 
-          if (Math.abs(_this6.controlCoordinates.targetOffsetX) === Math.abs(_this6.controlCoordinates.limitOffsetX)) {
-            _this6.controlCoordinates.initialOffsetX = _this6.controlCoordinates.targetOffsetX;
-            _this6.controlCoordinates.initialPointerOffsetX = _this6.controlCoordinates.pointerOffsetX;
-          }
+          // if (Math.abs(_this6.controlCoordinates.targetOffsetX) === Math.abs(_this6.controlCoordinates.limitOffsetX)) {
+          //   _this6.controlCoordinates.initialOffsetX = _this6.controlCoordinates.targetOffsetX;
+          //   _this6.controlCoordinates.initialPointerOffsetX = _this6.controlCoordinates.pointerOffsetX;
+          // }
 
-          if (Math.abs(_this6.controlCoordinates.targetOffsetY) === Math.abs(_this6.controlCoordinates.limitOffsetY)) {
-            _this6.controlCoordinates.initialOffsetY = _this6.controlCoordinates.targetOffsetY;
-            _this6.controlCoordinates.initialPointerOffsetY = _this6.controlCoordinates.pointerOffsetY;
-          }
+          // if (Math.abs(_this6.controlCoordinates.targetOffsetY) === Math.abs(_this6.controlCoordinates.limitOffsetY)) {
+          //   _this6.controlCoordinates.initialOffsetY = _this6.controlCoordinates.targetOffsetY;
+          //   _this6.controlCoordinates.initialPointerOffsetY = _this6.controlCoordinates.pointerOffsetY;
+          // }
 
-          _this6.setZoomData(_this6.controlCoordinates.initialScale, _this6.controlCoordinates.targetOffsetX, _this6.controlCoordinates.targetOffsetY);
+          _this6.setZoomData(_this6.controlCoordinates.initialScale, 0, 0);
 
           _this6.zoomPanElement(0 + "px", 0 + "px", _this6.controlCoordinates.targetScale);
         }
@@ -903,8 +903,8 @@ var SimpleLightbox = /*#__PURE__*/function () {
             } else if (_this6.controlCoordinates.touchCount === 1)
             /* Single touch */
             {
-              _this6.controlCoordinates.initialPointerOffsetX = event.touches[0].clientX;
-              _this6.controlCoordinates.initialPointerOffsetY = event.touches[0].clientY;
+              _this6.controlCoordinates.initialPointerOffsetX = 0;
+              _this6.controlCoordinates.initialPointerOffsetY = 0;
             } else if (_this6.controlCoordinates.touchCount > 1)
             /* Pinch */
             {
