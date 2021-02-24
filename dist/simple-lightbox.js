@@ -866,7 +866,7 @@ var SimpleLightbox = /*#__PURE__*/function () {
 
           _this6.setZoomData(_this6.controlCoordinates.initialScale, _this6.controlCoordinates.targetOffsetX, _this6.controlCoordinates.targetOffsetY);
 
-          _this6.zoomPanElement(_this6.controlCoordinates.targetOffsetX + "px", _this6.controlCoordinates.targetOffsetY + "px", _this6.controlCoordinates.targetScale);
+          _this6.zoomPanElement(0 + "px", 0 + "px", _this6.controlCoordinates.targetScale);
         }
 
         if (!_this6.controlCoordinates.zoomed) {
